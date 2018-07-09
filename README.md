@@ -17,7 +17,7 @@ Open a terminal and type this, replacing the email with yours (the same one you 
 **NB:** when asked for a passphrase, open your 1Password desktop app, and create a new strong password and call it *SSH Key*, and then copy paste it in the terminal. Nothing will show up on the screen, **that's normal**, when you're done, press Enter.
 
 
-If you are already using an SSH key, and configured your computer in order not to re-type your SSH passphrase at every `git push`, you need to follow these steps in order to reset it. We want you to retype your passphrase at every `git push`, to make sure that if someone get access to your computer, he cannot gain access to GitHub or Heroku from the Command Line.
+If you are already using an SSH key, and configured your computer in order not to re-type your SSH passphrase at every `git push`, you need to follow these steps in order to reset it. We want you to retype your passphrase at every `git push`, to make sure that if someone gains access to your computer, he cannot compromise the GitHub or Heroku repos from the Command Line.
 
 
 In the terminal type `st ~/.ssh/config `
