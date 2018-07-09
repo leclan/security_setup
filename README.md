@@ -16,6 +16,8 @@ Open a terminal and type this, replacing the email with yours (the same one you 
 
 **NB:** when asked for a passphrase, open your 1Password desktop app, and create a new strong password and call it *SSH Key*, and then copy paste it in the terminal. Nothing will show up on the screen, **that's normal**, when you're done, press Enter.
 
+***
+
 **GitHub :**
 
 
@@ -57,6 +59,7 @@ Go to https://github.com/settings/security and follow the different steps. At so
 
 Voila !
 
+***
 
 **Heroku :**
 
