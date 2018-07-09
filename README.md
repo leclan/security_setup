@@ -1,1 +1,116 @@
-# setup
+# Security setup for using GitHub and Heroku with 1Password
+
+**1Password :**
+
+First of all follow the 1Password setup steps and make sure you download the desktop app and the Google Chrome browser extension, and that everything works fine !
+
+**SSH Key :** 
+
+Generate an SSH key following these steps :
+
+
+Open a terminal and type this, replacing the email with yours (the same one you used to create your GitHub account). It will prompt for information. Just press enter until it asks for a passphrase.
+
+
+mkdir -p ~/.ssh && ssh-keygen -t ed25519 -o -a 100 -f ~/.ssh/id_ed25519 -C "TYPE_YOUR_EMAIL@HERE.com"
+
+**NB:** when asked for a passphrase, open your 1Password desktop app, and create a new strong password and call it *SSH Key*, and then copy paste it in the terminal. Nothing will show up on the screen, **that's normal**, when you're done, press Enter.
+
+**GitHub :**
+
+
+1. Using SSH key with GitHub
+
+
+Then you need to give your public key to GitHub. Run:
+
+
+cat ~/.ssh/id_ed25519.pub
+
+
+It will prompt on the screen the content of the id_ed25519.pub file. Copy that text, then go to github.com/settings/ssh. Click on Add SSH key, fill in the Title with your computer name, and paste the Key. Finish by clicking on the Add key green button.
+
+
+To check that this step is completed, in the terminal run this. You will be prompted a warning, type yes then Enter.
+
+
+*ssh -T git@github.com*
+
+
+If you see something like this, you're done!
+
+
+*Hi --------! You've successfully authenticated, but GitHub does not provide shell access*
+
+
+If it does not work, try running this before trying again the ssh -T command:
+
+
+*ssh-add ~/.ssh/id_ed25519*
+
+
+2. Using 2FA Authentication with GitHub and 1Password
+
+
+Go to https://github.com/settings/security and follow the different steps. At some point it will show you a QR Code. You will need to go to your mobile 1Password app, then click on the GitHub login, then Edit, and scroll down to *add 1 time password*, click on the QR code logo, scan the QR code on the computer, *Save*, and then provide the 6 digit code to GitHub and validate. 
+
+
+Voila !
+
+
+**Heroku :**
+
+
+1. Using SSH key with Heroku
+
+
+We will use the same SSH Key that we use for GitHub and that we generated in the first section. for that follow the steps :
+
+
+In the terminal, type :
+
+
+*heroku keys:add ~/.ssh/id_ed25519*
+
+
+Then type in the terminal :
+
+
+*git config --global url.ssh://git@heroku.com/.insteadOf https://git.heroku.com/*
+
+
+Then check if it work by typing :
+
+
+*git remote -v*
+
+
+You should see something like that :
+
+
+*heroku	ssh://git@heroku.com/limitless-chamber-84110.git (fetch)*
+*heroku	ssh://git@heroku.com/limitless-chamber-84110.git (push)*
+*origin	git@github.com:oruhtra/chat-rails-redux.git (fetch)*
+*origin	git@github.com:oruhtra/chat-rails-redux.git (push)*
+
+
+Then on your first connection to Heroku from the terminal, you will prompted something like that :
+
+
+*The authenticity of host 'heroku.com (50.19.85.132)' can't be established.*
+
+
+*RSA key fingerprint is SHA256:8tF0wX2WquK45aGKs/...*
+
+
+*Are you sure you want to continue connecting (yes/no)?*
+
+
+Type *yes* and voilà ! Everytime you will interact with heroku from the command line you will be prompter for the SSH passphrase which you get from 1Password.
+
+2. Using 2FA with Heroku
+
+
+Go to your Heroku account in the browser, and click on **Account settings**, then scroll and enable Two-factor authentication. Follow the steps (similar to GitHub), using your 1Password mobile app.
+
+Voilà !
