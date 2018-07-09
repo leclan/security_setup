@@ -12,7 +12,7 @@ Generate an SSH key following these steps :
 Open a terminal and type this, replacing the email with yours (the same one you used to create your GitHub account). It will prompt for information. Just press enter until it asks for a passphrase.
 
 
-mkdir -p ~/.ssh && ssh-keygen -t ed25519 -o -a 100 -f ~/.ssh/id_ed25519 -C "TYPE_YOUR_EMAIL@HERE.com"
+`mkdir -p ~/.ssh && ssh-keygen -t ed25519 -o -a 100 -f ~/.ssh/id_ed25519 -C "TYPE_YOUR_EMAIL@HERE.com"`
 
 **NB:** when asked for a passphrase, open your 1Password desktop app, and create a new strong password and call it *SSH Key*, and then copy paste it in the terminal. Nothing will show up on the screen, **that's normal**, when you're done, press Enter.
 
