@@ -88,27 +88,17 @@ Then check if it work by typing :
 You should see something like that :
 
 
-`*heroku	ssh://git@heroku.com/limitless-chamber-84110.git (fetch)*`
-
-
-`*heroku	ssh://git@heroku.com/limitless-chamber-84110.git (push)*`
-
-
-`*origin	git@github.com:oruhtra/chat-rails-redux.git (fetch)*`
-
-
+`*heroku	ssh://git@heroku.com/limitless-chamber-84110.git (fetch)*`  
+`*heroku	ssh://git@heroku.com/limitless-chamber-84110.git (push)*`  
+`*origin	git@github.com:oruhtra/chat-rails-redux.git (fetch)*`  
 `*origin	git@github.com:oruhtra/chat-rails-redux.git (push)*`
 
 
 Then on your first connection to Heroku from the terminal, you will prompted something like that :
 
 
-`*The authenticity of host 'heroku.com (50.19.85.132)' can't be established.*`
-
-
-`*RSA key fingerprint is SHA256:8tF0wX2WquK45aGKs/...*`
-
-
+`*The authenticity of host 'heroku.com (50.19.85.132)' can't be established.*`  
+`*RSA key fingerprint is SHA256:8tF0wX2WquK45aGKs/...*`  
 `*Are you sure you want to continue connecting (yes/no)?*`
 
 
