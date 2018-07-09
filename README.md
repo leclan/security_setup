@@ -25,7 +25,7 @@ Open a terminal and type this, replacing the email with yours (the same one you 
 Then you need to give your public key to GitHub. Run:
 
 
-cat ~/.ssh/id_ed25519.pub
+`cat ~/.ssh/id_ed25519.pub`
 
 
 It will prompt on the screen the content of the id_ed25519.pub file. Copy that text, then go to github.com/settings/ssh. Click on Add SSH key, fill in the Title with your computer name, and paste the Key. Finish by clicking on the Add key green button.
@@ -34,19 +34,19 @@ It will prompt on the screen the content of the id_ed25519.pub file. Copy that t
 To check that this step is completed, in the terminal run this. You will be prompted a warning, type yes then Enter.
 
 
-*ssh -T git@github.com*
+`*ssh -T git@github.com*`
 
 
 If you see something like this, you're done!
 
 
-*Hi --------! You've successfully authenticated, but GitHub does not provide shell access*
+`*Hi --------! You've successfully authenticated, but GitHub does not provide shell access*`
 
 
 If it does not work, try running this before trying again the ssh -T command:
 
 
-*ssh-add ~/.ssh/id_ed25519*
+`*ssh-add ~/.ssh/id_ed25519*`
 
 
 2. Using 2FA Authentication with GitHub and 1Password
@@ -70,40 +70,36 @@ We will use the same SSH Key that we use for GitHub and that we generated in the
 In the terminal, type :
 
 
-*heroku keys:add ~/.ssh/id_ed25519*
+`*heroku keys:add ~/.ssh/id_ed25519*`
 
 
 Then type in the terminal :
 
 
-*git config --global url.ssh://git@heroku.com/.insteadOf https://git.heroku.com/*
+`*git config --global url.ssh://git@heroku.com/.insteadOf https://git.heroku.com/*`
 
 
 Then check if it work by typing :
 
 
-*git remote -v*
+`*git remote -v*`
 
 
 You should see something like that :
 
 
-*heroku	ssh://git@heroku.com/limitless-chamber-84110.git (fetch)*
-*heroku	ssh://git@heroku.com/limitless-chamber-84110.git (push)*
-*origin	git@github.com:oruhtra/chat-rails-redux.git (fetch)*
-*origin	git@github.com:oruhtra/chat-rails-redux.git (push)*
+`*heroku	ssh://git@heroku.com/limitless-chamber-84110.git (fetch)*`
+`*heroku	ssh://git@heroku.com/limitless-chamber-84110.git (push)*`
+`*origin	git@github.com:oruhtra/chat-rails-redux.git (fetch)*`
+`*origin	git@github.com:oruhtra/chat-rails-redux.git (push)*`
 
 
 Then on your first connection to Heroku from the terminal, you will prompted something like that :
 
 
-*The authenticity of host 'heroku.com (50.19.85.132)' can't be established.*
-
-
-*RSA key fingerprint is SHA256:8tF0wX2WquK45aGKs/...*
-
-
-*Are you sure you want to continue connecting (yes/no)?*
+`*The authenticity of host 'heroku.com (50.19.85.132)' can't be established.*`
+`*RSA key fingerprint is SHA256:8tF0wX2WquK45aGKs/...*`
+`*Are you sure you want to continue connecting (yes/no)?*`
 
 
 Type *yes* and voilà ! Everytime you will interact with heroku from the command line you will be prompter for the SSH passphrase which you get from 1Password.
