@@ -4,6 +4,8 @@
 
 First of all follow the 1Password setup steps and make sure you download the desktop app and the Google Chrome browser extension, and that everything works fine !
 
+***
+
 **SSH Key :** 
 
 Generate an SSH key following these steps :
