@@ -92,7 +92,7 @@ We will use the same SSH Key that we use for GitHub and that we generated in the
 In the terminal, type :
 
 
-`*heroku keys:add ~/.ssh/id_ed25519*`
+`*heroku keys:add ~/.ssh/id_ed25519.pub*`
 
 
 Then type in the terminal :
