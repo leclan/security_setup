@@ -73,7 +73,15 @@ If it does not work, try running this before trying again the ssh -T command:
 2. Using Two-factor Authentication with GitHub and 1Password
 
 
-Go to https://github.com/settings/security and follow the different steps. At some point it will show you a QR Code. You will need to go to your mobile 1Password app, then click on the GitHub login, then Edit, and scroll down to *add 1 time password*, click on the QR code logo, scan the QR code on the computer, *Save*, and then provide the 6 digit code to GitHub and validate. 
+Go to https://github.com/settings/security and follow the different steps.  
+At some point it will show you a QR Code, you will need to follow these steps:  
+1. go to your mobile 1Password app  
+2. click on the GitHub login  
+3. click on Edit  
+4. scroll down to *add 1 time password*  
+5. click on the QR code logo  
+6. scan the QR code that is displayed on your computer screen  
+7. *Save* and then provide the 6 digit code to GitHub and validate
 
 
 Voilà !
