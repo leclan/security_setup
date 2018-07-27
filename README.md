@@ -101,7 +101,7 @@ Then type in the terminal :
 `*git config --global url.ssh://git@heroku.com/.insteadOf https://git.heroku.com/*`
 
 
-Then check if it worked by typing :
+Then check if it worked by typing the following (from a folder that is connected to an Heroku repo):
 
 
 `*git remote -v*`
