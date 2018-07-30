@@ -141,12 +141,15 @@ Go to your Heroku account in the browser, and click on **Account settings**, the
 
 Voilà !
 
-=> When you'll want to push to Heroku, you might be first asked to provide your credentials (fill in with your information)  
+3. Connecting to Heroku from CLI:  
+
+
+When you'll want to push to Heroku, you might be first asked to provide your credentials (fill in with your information)  
 `Email [arthur.reboul@gmail.com]: [YOUR HEROKU ACCOUNT EMAIL] 
 Password: [YOUR HEROKU ACCOUNT PASSWORD STORED IN 1PASSWORD]
 Two-factor code: [A ONE TIME CODE PROVIDED BY 1PASSWORD ON THE HEROKU LOGIN PAGE]`
 
-=> Then you will be asked with the SSH key passphrase:  
+Then you will be asked with the SSH key passphrase:  
 `Warning: Permanently added the RSA host key for IP address '50.19.85.154' to the list of known hosts.  
 Enter passphrase for key '/Users/arthurreboul/.ssh/id_ed25519': [YOUR SSH KEY PASSPHRASE]`
 
